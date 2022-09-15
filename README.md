@@ -6,7 +6,7 @@ rwatson@dela.com
 
 www.dela.com
 
-![Screenshot_1663205661](./Screenshot_1663205661.png)
+![Screenshot_1663215686](/Users/roywatson/devel/___my_sample_code/AndroidProtoDataStoreExample/Screenshot_1663215686.png)
 
 This is a simple example that strips out a lot of generally accepted architectural components and other proclaimed best practices. It is using the minimum of dependencies, frameworks and libraries in order to avoid obscuring the illustration of using androidx's *PreferencesDataStore*. 
 
