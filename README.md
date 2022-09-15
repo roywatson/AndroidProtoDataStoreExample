@@ -33,7 +33,7 @@ This is a simple example that strips out a lot of generally accepted architectur
 
 The starting point of this app was the template for a new project in Android Studio Chipmunk | 2021.2.1 Patch 2 called “Fragment + ViewModel” and using Kotlin. You can create an empty project based on that template and compare it to this project to discern what needs to be done to get your project started with the Room database library. 
 
-First, as always, we need to add the necessary dependencies to the project. In the app level build.gradle file I hsve marked my additions with comments. These additions might in turn require version updates to other dependencies and settings. Once you have made my additions, Android Studio will help you identify the other required changes. Be patient as it might take a few iterations and pay close attention to the build output messages.	
+First, as always, we need to add the necessary dependencies to the project. In the app level build.gradle file I hsve marked my additions with comments. Don't forget the new last section at the bottom of the app level build.gradle file called protobuf {}.These additions might in turn require version updates to other dependencies and settings. Once you have made my additions, Android Studio will help you identify the other required changes. Be patient as it might take a few iterations and pay close attention to the build output messages. 
 
 First in <ProjectRoot>/app/src/main/proto/my_prefs.proto I defined he protobuffer that will hold our preferences. The comments in that .proto file will guide you to reference material about protobuffers and .proto file syntax.
 
