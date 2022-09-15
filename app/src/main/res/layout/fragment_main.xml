@@ -8,13 +8,227 @@
     tools:context=".ui.main.MainFragment">
 
     <TextView
-        android:id="@+id/message"
+        android:id="@+id/attribution_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
+        android:text="Sample Code by:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/attribution_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:id="@+id/attribution_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R O Y  W A T S O N"
+        android:textSize="24sp"
+        android:fontFamily="@font/rosario_font"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/attribution_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attribution_label"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:id="@+id/attribution_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rwatson@dela.com"
+        android:textSize="24sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/attribution_web"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attribution_name"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:id="@+id/attribution_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.dela.com"
+        android:textSize="24sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/set_learning_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attribution_email"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+
+    <TextView
+        android:id="@+id/set_learning_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Learning = "
+        android:textSize="18sp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/set_color_label"
+        app:layout_constraintEnd_toStartOf="@+id/set_learning_true_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attribution_web"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+        android:id="@+id/set_learning_true_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="true"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/set_learning_label"
+        app:layout_constraintEnd_toStartOf="@+id/set_learning_false_button"
+        app:layout_constraintStart_toEndOf="@+id/set_learning_label"
+        app:layout_constraintTop_toTopOf="@+id/set_learning_label"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+    <Button
+        android:id="@+id/set_learning_false_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="false"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/set_learning_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/set_learning_true_button"
+        app:layout_constraintTop_toTopOf="@+id/set_learning_label"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+
+
+    <TextView
+        android:id="@+id/set_color_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Color = "
+        android:textSize="18sp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/set_number_label"
+        app:layout_constraintEnd_toStartOf="@+id/set_color_green_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_learning_label"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+        android:id="@+id/set_color_green_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="green"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/set_color_label"
+        app:layout_constraintEnd_toStartOf="@+id/set_color_blue_button"
+        app:layout_constraintStart_toEndOf="@+id/set_color_label"
+        app:layout_constraintTop_toTopOf="@+id/set_color_label"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+        android:id="@+id/set_color_blue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="blue"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/set_color_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/set_color_green_button"
+        app:layout_constraintTop_toTopOf="@+id/set_color_label" />
+
+
+    <TextView
+        android:id="@+id/set_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Number = "
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/reset_defaults_button"
+        app:layout_constraintEnd_toStartOf="@+id/set_mumber_43_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_color_label"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+        android:id="@+id/set_mumber_43_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="43"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/set_number_label"
+        app:layout_constraintEnd_toStartOf="@+id/set_mumber_86_button"
+        app:layout_constraintStart_toEndOf="@+id/set_number_label"
+        app:layout_constraintTop_toTopOf="@+id/set_number_label"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+        android:id="@+id/set_mumber_86_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="86"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/set_number_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/set_mumber_43_button"
+        app:layout_constraintTop_toTopOf="@+id/set_number_label" />
+
+
+    <Button
+        android:id="@+id/reset_defaults_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Default Values"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/learning_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_number_label"/>
+
+    <TextView
+        android:id="@+id/learning_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value will show here."
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/color_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reset_defaults_button" />
+
+    <TextView
+        android:id="@+id/color_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value will show here."
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/number_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learning_tv" />
+
+    <TextView
+        android:id="@+id/number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value will show here."
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/color_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

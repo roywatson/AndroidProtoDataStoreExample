@@ -1,0 +1,20 @@
+/* To understand protobuffer syntax and to get started building your own
+.proto files you can review:
+
+Google tutorials:
+https://developers.google.com/protocol-buffers/docs/tutorials
+
+googles official "Language Guide (proto3) at:
+https://developers.google.com/protocol-buffers/docs/proto3
+
+*/
+syntax = "proto3";
+
+option java_package = "com.delasystems.androidprotodatastoreexample";
+option java_multiple_files = true;
+
+message MyPrefs {
+  bool  i_am_learning= 1;
+  string favorite_color = 2;
+  int32 favorite_number = 3;
+}

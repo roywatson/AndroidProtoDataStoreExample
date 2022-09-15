@@ -1,0 +1,46 @@
+package com.delasystems.androidprotodatastoreexample.data
+
+import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
+import com.delasystems.androidprotodatastoreexample.MyPrefs
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+
+class MyPrefsRepository(private val context: Context) {
+
+    private val Context.settingsDataStore: DataStore<MyPrefs> by dataStore(
+        fileName = "my_prefences.pb",
+        serializer = MyPrefsSerializer
+    )
+
+    val myPreferences: Flow<MyPrefs> = context.settingsDataStore.data
+        .catch {
+            emit(MyPrefs.getDefaultInstance())
+        }
+
+    suspend fun setIAmLearning(learning: Boolean) {
+        context.settingsDataStore.updateData { currentValues ->
+            currentValues.toBuilder().setIAmLearning(learning).build()
+        }
+    }
+
+    suspend fun setFavoriteColor(color: String) {
+        context.settingsDataStore.updateData { currentValues ->
+            currentValues.toBuilder().setFavoriteColor(color).build()
+        }
+    }
+
+    suspend fun setFavoriteNumber(number: Int) {
+        context.settingsDataStore.updateData { currentValues ->
+            currentValues.toBuilder().setFavoriteNumber(number).build()
+        }
+    }
+
+    suspend fun setDefaults() {
+        context.settingsDataStore.updateData { currentValues ->
+            currentValues.toBuilder().clear().build()
+        }
+    }
+
+}
